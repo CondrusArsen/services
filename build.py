@@ -6,7 +6,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 CAT = json.loads((HERE.parent / "portfolio-bot" / "catalog.json").read_text(encoding="utf-8"))
-COVERS = {"lumen": "img/game.jpg", "cowork": "img/cowork.jpg", "coffee": "img/promo.jpg", "playable": "img/playable.jpg"}
+COVERS = {"lumen": "img/game.jpg", "cowork": "img/cowork.jpg", "coffee": "img/promo.jpg", "playable": "img/playable.jpg", "audit": "img/audit.jpg"}
 BOT = "https://t.me/arseni_games_bot"
 e = html.escape
 
