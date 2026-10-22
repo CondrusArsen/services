@@ -28,7 +28,7 @@ services = "\n".join(f"""
       <p class="result">{e(s['result'])}</p>
       <ul>{''.join(f'<li>{e(i)}</li>' for i in s['includes'])}</ul>
       <p class="ex"><b>Не входит:</b> {e(s['excludes'])}</p>
-      <div class="svc-foot"><a class="btn" href="{BOT}">Обсудить задачу</a>{f'<a class="link" href="{e(case_url[s["case_id"]])}">Пример →</a>' if s.get('case_id') in case_url else ''}</div>
+      <div class="svc-foot"><a class="btn" href="{BOT}?start=service_{e(s['id'])}">Обсудить задачу</a>{f'<a class="link" href="{e(case_url[s["case_id"]])}">Пример →</a>' if s.get('case_id') in case_url else ''}</div>
     </article>""" for s in CAT["services"])
 
 page = f"""<!DOCTYPE html>
