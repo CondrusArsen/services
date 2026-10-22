@@ -3,138 +3,183 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Игры и игровая реклама под ключ — Арсений Атрохов</title>
-<meta name="description" content="Playable-реклама HTML5, браузерные мини-игры для брендов, игры для Telegram, скрипты Roblox. Первая играбельная сборка через 1–2 дня.">
-<meta property="og:title" content="Игры и игровая реклама под ключ">
-<meta property="og:description" content="Playable-реклама, мини-игры для сайтов и Telegram, Roblox. 80+ игр в портфолио — можно поиграть.">
+<title>Арсений Атрохов — игровые интерфейсы, промо-игры и playable</title>
+<meta name="description" content="Интерфейсы игр и приложений, промо-игры для брендов, HTML5 playable-реклама, сайты с интерактивным сценарием и Telegram-боты. Понятный объём и цена до старта.">
+<meta property="og:title" content="Арсений Атрохов — игровые интерфейсы, промо-игры и playable">
+<meta property="og:image" content="https://condrusarsen.github.io/services/img/game.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#0d1020;--card:#171b31;--line:#262b4a;--ink:#f1f3ff;--mute:#a7aed3;--acc:#ffcf3f;--go:#37c46a}
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-  a{color:#8db8ff}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
-  header{padding:56px 0 32px}
-  .tag{display:inline-block;background:#232850;color:var(--acc);padding:4px 12px;border-radius:999px;font-size:14px;font-weight:700}
-  h1{font-size:clamp(30px,6vw,52px);line-height:1.1;margin:16px 0 12px}
-  .lead{color:var(--mute);font-size:clamp(17px,2.4vw,20px);max-width:760px;margin:0 0 24px}
-  .cta{display:inline-block;background:var(--go);color:#fff;text-decoration:none;font-weight:800;padding:14px 22px;border-radius:14px;margin:0 8px 8px 0}
-  .cta.alt{background:#232850;color:var(--ink)}
-  .stats{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0}
-  .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;min-width:150px}
-  .stat b{display:block;font-size:24px;color:var(--acc)}
-  .stat span{color:var(--mute);font-size:14px}
-  h2{font-size:clamp(24px,4vw,34px);margin:48px 0 16px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column}
-  .card h3{margin:0 0 6px;font-size:20px}
-  .price{color:var(--acc);font-weight:800;margin:0 0 10px}
-  .card p{color:var(--mute);margin:0 0 12px;font-size:15px}
-  .card ul{margin:0 0 14px;padding-left:18px;color:var(--mute);font-size:15px}
-  .card .demo{margin-top:auto;font-weight:700;font-size:15px}
-  .steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-  .step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
-  .step::before{counter-increment:s;content:counter(s);display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--acc);color:#111;font-weight:900;margin-bottom:8px}
-  .step p{color:var(--mute);margin:4px 0 0;font-size:15px}
-  .pay{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
-  .pay li{margin:6px 0;color:var(--mute)}
-  .pay li b{color:var(--ink)}
-  footer{padding:48px 0;color:var(--mute);font-size:15px}
-  .contact{background:linear-gradient(135deg,#2a2f6b,#173a4a);border-radius:22px;padding:28px;margin-top:48px}
-  .contact h2{margin-top:0}
+:root{--bg:#0b1020;--surface:#121a33;--surface2:#18223f;--line:#24305a;--ink:#eef2ff;--mute:#9aa6cf;--acc:#2ee6c9;--gold:#ffd166}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(80% 50% at 80% 0%,#1b2c63 0%,var(--bg) 60%);background-color:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;height:72px}
+nav b{font-weight:800;letter-spacing:-.01em}
+nav .links{display:flex;gap:24px;color:var(--mute);font-weight:600;font-size:15px}
+nav .links a{text-decoration:none}
+@media (max-width:720px){nav .links{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 20px;border-radius:14px;background:var(--acc);color:#03332c;font-weight:800;text-decoration:none;white-space:nowrap}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+header.hero{padding:56px 0 24px;max-width:820px}
+.eyebrow{display:inline-block;font-weight:700;font-size:14px;color:var(--gold);background:rgba(255,209,102,.1);border-radius:999px;padding:5px 12px}
+h1{font-size:clamp(36px,5.6vw,62px);line-height:1.04;letter-spacing:-.03em;margin:18px 0 16px;font-weight:800}
+.lead{color:var(--mute);font-size:clamp(17px,2vw,20px);margin:0 0 26px}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap}
+h2{font-size:clamp(26px,3.6vw,36px);letter-spacing:-.02em;margin:72px 0 8px;font-weight:800}
+.sub{color:var(--mute);margin:0 0 24px;max-width:720px}
+.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}
+.case{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;text-decoration:none;transition:transform .25s,border-color .25s}
+.case:hover{transform:translateY(-4px);border-color:#3a4a85}
+.case img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.case-bot{aspect-ratio:16/10;display:grid;place-items:center;background:linear-gradient(135deg,#229ed9,#1b4880)}
+.case-bot span{font-weight:800;font-size:24px;background:rgba(0,0,0,.25);padding:10px 18px;border-radius:14px}
+.case-body{padding:18px 20px 20px}
+.case-body h3{margin:0 0 6px;font-size:19px}
+.case-body p{margin:0 0 10px;color:var(--mute);font-size:15px}
+.case-body small{display:block;color:#7180b3;font-size:12.5px;line-height:1.45}
+.svcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px;display:flex;flex-direction:column}
+.svc-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.svc h3{margin:0;font-size:19px;line-height:1.25}
+.price{text-align:right;font-weight:800;font-size:20px;color:var(--acc);white-space:nowrap}
+.price span{display:block;font-weight:600;font-size:12.5px;color:var(--mute)}
+.result{margin:12px 0 10px}
+.svc ul{margin:0 0 12px;padding-left:18px;color:var(--mute);font-size:15px}
+.ex{font-size:13px;color:#7f8dbd;background:var(--surface2);border-radius:12px;padding:10px 12px;margin:0 0 16px}
+.ex b{color:var(--mute)}
+.svc-foot{margin-top:auto;display:flex;gap:14px;align-items:center}
+.link{font-weight:700;color:var(--mute);text-decoration:none}
+.link:hover{color:var(--ink)}
+.note{color:var(--mute);font-size:14px;margin-top:14px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;counter-reset:s}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px}
+.step::before{counter-increment:s;content:counter(s);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#3a2600;font-weight:800;margin-bottom:8px}
+.step b{display:block}
+.step p{margin:4px 0 0;color:var(--mute);font-size:15px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:820px){.about{grid-template-columns:1fr}}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px}
+.box p{margin:6px 0;color:var(--mute)}
+.final{margin:72px 0 24px;background:linear-gradient(135deg,#123461,#0d4a5a);border:1px solid var(--line);border-radius:26px;padding:32px}
+.final h2{margin:0 0 8px}
+footer{padding:28px 0 48px;color:#7180b3;font-size:14px}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <span class="tag">Свободен для новых заказов</span>
-    <h1>Игры и игровая реклама под ключ — за дни, а не недели</h1>
-    <p class="lead">Playable-реклама для мобильных игр, браузерные мини-игры для брендов и сайтов, игры для Telegram и скрипты для Roblox. Я работаю с ИИ-агентами: код пишется быстро, а дизайн, баланс и проверку каждой сборки на телефоне делаю сам. Первую играбельную версию присылаю ссылкой через 1–2 дня.</p>
-    <a class="cta" href="https://t.me/arseni_games_bot">Оставить заявку в Telegram</a>
-    <a class="cta alt" href="https://condrusarsen.github.io/ai-game-lab/">Поиграть в портфолио</a>
-    <div class="stats">
-      <div class="stat"><b>80+</b><span>играбельных игр и прототипов</span></div>
-      <div class="stat"><b>600+</b><span>разборов игр</span></div>
-      <div class="stat"><b>6 лет</b><span>в Roblox Studio (Luau)</span></div>
-      <div class="stat"><b>4 мес.</b><span>в игровой студии</span></div>
-    </div>
+  <nav><b>Арсений Атрохов</b><div class="links"><a href="#cases">Кейсы</a><a href="#services">Услуги</a><a href="#process">Как работаю</a></div><a class="btn" href="https://t.me/arseni_games_bot">Написать</a></nav>
+
+  <header class="hero">
+    <span class="eyebrow">Геймдизайн · UI/UX · HTML5 · с ИИ-агентами</span>
+    <h1>Игровые интерфейсы, промо-игры и playable — с понятным объёмом и ценой до старта</h1>
+    <p class="lead">Проектирую и собираю интерактивные прототипы: заказчик сразу пробует решение на своём телефоне, а не смотрит на статичные картинки. Код пишут ИИ-агенты, сценарии, решения и проверку каждой сборки делаю я.</p>
+    <div class="cta-row"><a class="btn" href="https://t.me/arseni_games_bot">Обсудить задачу в Telegram</a><a class="btn ghost" href="#cases">Смотреть кейсы</a></div>
   </header>
 
-  <h2>Что делаю</h2>
-  <div class="grid">
-    <section class="card">
-      <h3>Playable-реклама HTML5</h3>
-      <p class="price">от 3 000 ₽ за простую механику на ваших ассетах · 2–3 дня</p>
-      <p>Интерактивная реклама вашей игры в одном HTML-файле: туториал, 15–30 секунд геймплея, end card с кнопкой в стор.</p>
-      <ul><li>Один HTML-файл со структурой MRAID 2.0</li><li>Адаптация под требования выбранной сети после согласования</li><li>Пин-пазлы, раннеры, merge, выбор варианта</li></ul>
-      <a class="demo" href="https://condrusarsen.github.io/playable-ads-demo/">▶ Демо: 3 playable-рекламы (canvas и PixiJS)</a>
-    </section>
-    <section class="card">
-      <h3>Мини-игра для бренда, сайта или акции</h3>
-      <p class="price">от 3 000 ₽ за игру на 1 экран · 2–4 дня</p>
-      <p>Игра в ваших цветах и с вашими товарами: для промоакции, праздника, выставки или рекламы в соцсетях.</p>
-      <ul><li>Работает с телефона без установки</li><li>Промокод, форма заявки или кнопка на сайт</li><li>Встраивание в Tilda, WordPress или отдельная ссылка</li></ul>
-      <a class="demo" href="https://condrusarsen.github.io/ai-game-lab/">▶ 80+ игр в портфолио</a>
-    </section>
-    <section class="card">
-      <h3>Игра для Telegram</h3>
-      <p class="price">от 4 000 ₽ · 3–5 дней</p>
-      <p>Игра открывается прямо в Telegram по кнопке бота: для канала, сообщества, конкурса или продаж.</p>
-      <ul><li>Простая игра + бот с кнопкой «Играть» — от 4 000 ₽</li><li>Общая таблица лидеров и «пригласи друга» требуют сервера — в расширенном пакете, цена после оценки</li><li>Бесплатный хостинг или ваш сервер</li></ul>
-      <a class="demo" href="https://condrusarsen.github.io/playable-ads-demo/tg-stack/">▶ Демо: игра для Telegram</a>
-    </section>
-    <section class="card">
-      <h3>Скрипты и системы для Roblox</h3>
-      <p class="price">от 1 500 ₽ за небольшой скрипт · 1–3 дня</p>
-      <p>Luau-код для вашего плейса с серверной проверкой операций.</p>
-      <ul><li>Сохранения, магазин, геймпассы</li><li>Лидерборды, награды, симуляторы</li><li>NPC, волны врагов, UI под телефон</li></ul>
-      <a class="demo" href="https://github.com/CondrusArsen/arcane-orchard-rpg">▶ Пример: Roblox RPG</a>
-    </section>
-    <section class="card">
-      <h3>Разбор игры конкурента</h3>
-      <p class="price">от 1 500 ₽ · 1–2 дня</p>
-      <p>Почему игра зарабатывает и что взять себе: кор-луп, первые 10 минут, экономика, монетизация, удержание.</p>
-      <ul><li>HTML или PDF со скриншотами</li><li>5–10 конкретных идей для вашей игры</li><li>Мобильные, браузерные и Roblox-игры</li></ul>
-      <a class="demo" href="https://condrusarsen.github.io/ai-game-lab/">▶ Библиотека разборов</a>
-    </section>
-    <section class="card">
-      <h3>UI/UX: игры, сайты, сервисы</h3>
-      <p class="price">от 2 000 ₽ · 2–3 дня</p>
-      <p>Меню, уровни, магазин, попапы, экраны победы и проигрыша — с компонентами и экспортом для разработчика.</p>
-      <ul><li>Компоненты и состояния кнопок</li><li>Иконки в едином стиле</li><li>Кликабельный прототип по запросу</li></ul>
-      <a class="demo" href="https://condrusarsen.github.io/game-ui-case/">▶ Кейс: интерактивный UI игры с анимациями</a>
-      <a class="demo" href="https://condrusarsen.github.io/coworking-case/" style="margin-top:6px">▶ Кейс: бронирование коворкинга (сайт + телефон)</a>
-    </section>
+  <h2 id="cases">Кейсы</h2>
+  <p class="sub">Самостоятельные концепты, сделанные с ИИ. Это не клиентские релизы: коммерческие показатели не заявляю. Каждый можно открыть и пройти.</p>
+  <div class="cases">
+    <a class="case" href="https://condrusarsen.github.io/game-ui-case/">
+      <img src="img/game.jpg" alt="" loading="lazy">
+      <div class="case-body"><h3>Lumen Tides · игровой интерфейс</h3><p>Домашний экран, карта, выбор усилителей, победа, магазин и сезонные награды. Единая палитра, компоненты и связанные переходы.</p><small>Самостоятельный AI concept. Не клиентский релиз; коммерческие показатели не заявлены.</small></div>
+    </a>
+
+    <a class="case" href="https://condrusarsen.github.io/coworking-case/">
+      <img src="img/cowork.jpg" alt="" loading="lazy">
+      <div class="case-body"><h3>Улей · выбор места и бронирование</h3><p>Сайт коворкинга: выбор пространства, тарифа и времени, затем проверка данных заявки. Телефон и большой экран.</p><small>Самостоятельный AI concept, вымышленный бренд. Реальные бронирования и оплата не подключены.</small></div>
+    </a>
+
+    <a class="case" href="https://condrusarsen.github.io/promo-game-case/">
+      <img src="img/promo.jpg" alt="" loading="lazy">
+      <div class="case-body"><h3>Кофе-рейн · промо-механика</h3><p>Короткий игровой раунд для кофейни: ловить предметы, набрать очки и увидеть предложение на экране результата.</p><small>Самостоятельный AI concept, вымышленная кофейня. Промокод демонстрационный; заявки не отправляются в CRM.</small></div>
+    </a>
+
+    <a class="case" href="https://condrusarsen.github.io/playable-ads-demo/">
+      <img src="img/playable.jpg" alt="" loading="lazy">
+      <div class="case-body"><h3>Playable · три короткие механики</h3><p>Головоломка со штифтами, толпа с воротами и merge-бой. Обучение, взаимодействие и финальный CTA в коротком формате.</p><small>AI-assisted демонстрации. Живые рекламные кампании и модерация сетей не проводились.</small></div>
+    </a>
+
+    <a class="case" href="https://t.me/arseni_games_bot">
+      <div class="case-bot"><span>@arseni_games_bot</span></div>
+      <div class="case-body"><h3>Этот бот · каталог и заявка</h3><p>Портфолио, услуги с границами объёма и пошаговая заявка с проверкой перед отправкой.</p><small>Собственный инструмент. Сервер должен оставаться включённым; продажи и доход не гарантируются.</small></div>
+    </a>
   </div>
 
-  <h2>Как работаем</h2>
+  <h2 id="services">Услуги и стартовые цены</h2>
+  <p class="sub">Цена указана за описанный объём. Всё, что не входит, видно заранее и оценивается отдельно.</p>
+  <div class="svcs">
+    <article class="svc">
+      <div class="svc-head"><h3>Интерфейс игры или приложения</h3><div class="price">от 12 000 ₽<span>5–7 рабочих дней</span></div></div>
+      <p class="result">Пять основных мобильных экранов и одно модальное окно в едином стиле, базовые компоненты и связанный прототип.</p>
+      <ul><li>Один визуальный вариант</li><li>Ключевой пользовательский сценарий</li><li>Figma или интерактивный HTML — формат выбираем в ТЗ</li><li>Один согласованный раунд правок</li></ul>
+      <p class="ex"><b>Не входит:</b> Вторая платформа, дополнительные экраны, сервер и готовое приложение оцениваются отдельно.</p>
+      <div class="svc-foot"><a class="btn" href="https://t.me/arseni_games_bot">Обсудить задачу</a><a class="link" href="https://condrusarsen.github.io/game-ui-case/">Пример →</a></div>
+    </article>
+
+    <article class="svc">
+      <div class="svc-head"><h3>Промо-игра для бренда</h3><div class="price">от 15 000 ₽<span>5–7 рабочих дней</span></div></div>
+      <p class="result">Одна браузерная механика, стартовый экран, игровой раунд и экран результата с вашим предложением.</p>
+      <ul><li>Адаптация цвета и оформления под бренд</li><li>Мышь и сенсорное управление</li><li>Один язык</li><li>Размещение демо и передача HTML/исходников</li></ul>
+      <p class="ex"><b>Не входит:</b> Реальные промокоды, сбор контактов на сервере, CRM, платежи и аналитика — отдельные интеграции. Демонстрационный код скидки сам по себе не даёт скидку.</p>
+      <div class="svc-foot"><a class="btn" href="https://t.me/arseni_games_bot">Обсудить задачу</a><a class="link" href="https://condrusarsen.github.io/promo-game-case/">Пример →</a></div>
+    </article>
+
+    <article class="svc">
+      <div class="svc-head"><h3>HTML5 playable-реклама</h3><div class="price">от 10 000 ₽<span>3–5 рабочих дней</span></div></div>
+      <p class="result">Одна короткая механика, обучение и финальный экран с CTA, исходники и веб-демо.</p>
+      <ul><li>Одна ориентация экрана</li><li>Один вариант графики и текста</li><li>Исходник HTML5</li><li>Подготовка стартового пакета под одну согласованную сеть</li></ul>
+      <p class="ex"><b>Не входит:</b> Допуск рекламной сетью, рекламный бюджет, UA-метрики и гарантии конверсии не входят. Требования сети проверяем до оценки.</p>
+      <div class="svc-foot"><a class="btn" href="https://t.me/arseni_games_bot">Обсудить задачу</a><a class="link" href="https://condrusarsen.github.io/playable-ads-demo/">Пример →</a></div>
+    </article>
+
+    <article class="svc">
+      <div class="svc-head"><h3>Сайт с интерактивным сценарием</h3><div class="price">от 18 000 ₽<span>5–8 рабочих дней</span></div></div>
+      <p class="result">Одна посадочная страница до пяти смысловых блоков и один демонстрационный сценарий заявки или бронирования.</p>
+      <ul><li>Компоновка для телефона и компьютера</li><li>Один визуальный вариант</li><li>Понятные состояния формы</li><li>Размещение демо и исходники</li></ul>
+      <p class="ex"><b>Не входит:</b> Реальное наличие мест, календарь, CMS, CRM, оплата и хранение персональных данных на сервере оцениваются отдельно.</p>
+      <div class="svc-foot"><a class="btn" href="https://t.me/arseni_games_bot">Обсудить задачу</a><a class="link" href="https://condrusarsen.github.io/coworking-case/">Пример →</a></div>
+    </article>
+
+    <article class="svc">
+      <div class="svc-head"><h3>Telegram-бот с заявками</h3><div class="price">от 12 000 ₽<span>3–5 рабочих дней</span></div></div>
+      <p class="result">Меню до шести разделов, карточки услуг и форма заявки до четырёх шагов с подтверждением и уведомлением владельца.</p>
+      <ul><li>Тексты и навигация</li><li>Возврат и отмена заявки</li><li>Один чат владельца</li><li>Исходники и инструкция размещения</li></ul>
+      <p class="ex"><b>Не входит:</b> LLM, голос, CRM, платежи, рассылки и круглосуточный сервер в базовую цену не входят. Расходы API и хостинга согласуем отдельно.</p>
+      <div class="svc-foot"><a class="btn" href="https://t.me/arseni_games_bot">Обсудить задачу</a><a class="link" href="https://t.me/arseni_games_bot">Пример →</a></div>
+    </article>
+
+    <article class="svc">
+      <div class="svc-head"><h3>UX-разбор браузерной игры</h3><div class="price">от 5 000 ₽<span>2–3 рабочих дня</span></div></div>
+      <p class="result">Один плейтест до 90 минут и отчёт с наблюдаемыми проблемами, шагами воспроизведения и приоритетами исправлений.</p>
+      <ul><li>Обучение и основной сценарий</li><li>Скриншоты проблем</li><li>Проверка на одном согласованном окружении</li><li>Рекомендации по ясности и обратной связи</li></ul>
+      <p class="ex"><b>Не входит:</b> Это не полная регрессия, аудит безопасности или проверка на всех телефонах. Прохождение всех уровней не обещается.</p>
+      <div class="svc-foot"><a class="btn" href="https://t.me/arseni_games_bot">Обсудить задачу</a><a class="link" href="https://condrusarsen.github.io/game-ui-case/">Пример →</a></div>
+    </article>
+  </div>
+  <p class="note">Это стартовые цены за объём ниже. Итоговые цену и срок согласуем после ТЗ. Хостинг, API, реклама и платные сервисы оплачиваются отдельно, если понадобятся.</p>
+
+  <h2 id="process">Как работаю</h2>
   <div class="steps">
-    <div class="step"><b>Задача</b><p>Пишете идею в Telegram. Задаю 3–5 вопросов и называю точную цену и срок.</p></div>
-    <div class="step"><b>Предоплата 50%</b><p>Для небольших заказов можно 100% после первой сборки — по договорённости.</p></div>
-    <div class="step"><b>Сборка за 1–2 дня</b><p>Присылаю ссылку: открываете на телефоне, трогаете, пишете правки.</p></div>
-    <div class="step"><b>Сдача</b><p>Финальные файлы, исходники и инструкция. Мелкие правки в течение недели — бесплатно.</p></div>
+    <div class="step"><b>ТЗ и оценка</b><p>Задаю вопросы, фиксирую объём, срок, цену и что не входит.</p></div>
+    <div class="step"><b>Первая версия</b><p>Присылаю ссылку на рабочую версию, её можно открыть на телефоне.</p></div>
+    <div class="step"><b>Правки</b><p>Один согласованный раунд правок входит в цену.</p></div>
+    <div class="step"><b>Передача</b><p>Исходники, инструкция и размещение демо.</p></div>
   </div>
 
-  <h2>Оплата</h2>
-  <div class="pay">
-    <ul>
-      <li><b>Из России:</b> перевод на карту по номеру телефона (СБП) или карте.</li>
-      <li><b>Из Беларуси:</b> перевод на карту.</li>
-      <li><b>Из других стран:</b> способ оплаты согласуем до начала работы.</li>
-      <li><b>Через биржу:</b> «Безопасная сделка» FL.ru — возможность проверяем до заказа.</li>
-    </ul>
+  <h2>Обо мне</h2>
+  <div class="about">
+    <div class="box"><b>Опыт</b><p>4 месяца в игровой студии (2026): разборы игр, экономика live-игры, плейтесты, релизный QA.</p><p>600+ разборов игр, 6+ лет в Roblox Studio (Luau), математик по образованию.</p></div>
+    <div class="box"><b>Условия</b><p>Удалённо из Беларуси (UTC+3), общение на русском, английский — переписка.</p><p>Способ оплаты и документы согласуем до начала работы.</p></div>
   </div>
 
-  <section class="contact">
-    <h2>Обсудим вашу игру?</h2>
-    <p class="lead">Напишите, что нужно и к какому сроку. Отвечаю в течение пары часов (Минск, UTC+3).</p>
-    <a class="cta" href="https://t.me/qintin">Telegram: @qintin</a>
-    <a class="cta alt" href="mailto:arsen123593@gmail.com">arsen123593@gmail.com</a>
+  <section class="final">
+    <h2>Есть задача?</h2>
+    <p class="lead" style="margin-bottom:18px">Опишите её в боте: он соберёт заявку за 4 шага, а я отвечу лично.</p>
+    <div class="cta-row"><a class="btn" href="https://t.me/arseni_games_bot">Открыть @arseni_games_bot</a><a class="btn ghost" href="https://github.com/CondrusArsen">GitHub</a><a class="btn ghost" href="https://www.linkedin.com/in/arseni-atrokhov/">LinkedIn</a></div>
   </section>
-
-  <footer>
-    Арсений Атрохов — геймдизайнер и разработчик игр (HTML5, Roblox/Luau). Гомель, Беларусь.
-    <a href="https://github.com/CondrusArsen">GitHub</a> · <a href="https://www.linkedin.com/in/arseni-atrokhov/">LinkedIn</a>
-  </footer>
+  <footer>© 2026 Арсений Атрохов · Сайт собирается из того же каталога, что и бот: цены и объёмы везде одинаковые.</footer>
 </div>
 </body>
 </html>
